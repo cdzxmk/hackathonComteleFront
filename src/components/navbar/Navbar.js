@@ -21,7 +21,7 @@ export default class Navbar extends Component {
                     <nav className="transparent">
                         <div className="nav-wrapper">
                             <Link to={{pathname:"/"}} className="brand-logo"><img alt="Logo SMcash" className="responsive-img logo-nav" src={"./assets/logo.png"}></img></Link>
-                            <a href="#!" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                            <a href="#!" data-target="mobile-demo" className="sidenav-trigger"><i style={{color:"black"}} className="material-icons">menu</i></a>
                             <ul className="right hide-on-med-and-down">
                                 <li><a className="" href="#!">Entrar</a></li>
                                 <li><a className="yellow accent-4 waves-effect btn waves-yellow btn-large destaque-nav" href="#!">Cadastrar</a></li>

@@ -1,8 +1,11 @@
+main{
+    overflow-x: hidden;
+}
+
 .background{
     width: 100vw;
-    height: 100vh;
-    background-color:#fefefe!important;
-    overflow-x:hidden;
+    height: 800px;
+    background-color:#fafafa!important;
 }
 
 .money{
@@ -12,6 +15,14 @@
     align-items: center;
     margin-top: 5%;
     flex-direction: row;
+    position: relative;
+}
+
+.vector{
+    width: 100vw;
+    height: 30vw;
+    color: red;
+    position: absolute;
 }
 
 .anuncio-cash{
@@ -23,3 +34,39 @@
     margin-left:10px;
     font-size: 50px;
 }
+
+.anuncio-cash-body{
+    font-family: 'Ubuntu';
+    color: #423539;
+    font-size: 20px;
+}
+
+.btn-main{
+    font-weight: bold;
+}
+
+.background-red{
+    width: 100vw;
+    height: 800px;
+    background-color:#63b8b2!important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.title-red{
+    color:#fafafa;
+    text-align: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+} 
