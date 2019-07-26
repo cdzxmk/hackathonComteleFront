@@ -1,0 +1,25 @@
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-color:#fefefe!important;
+    overflow-x:hidden;
+}
+
+.money{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 5%;
+    flex-direction: row;
+}
+
+.anuncio-cash{
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #214f26;
+    text-align: left;
+    margin-left:10px;
+    font-size: 50px;
+}
