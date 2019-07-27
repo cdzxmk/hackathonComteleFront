@@ -47,7 +47,7 @@ main{
 
 .background-red{
     width: 100vw;
-    height: 800px;
+    height: 700px;
     background-color:#63b8b2!important;
     display: flex;
     justify-content: center;
@@ -61,9 +61,80 @@ main{
     text-align: center;
 }
 
+.box-graphics{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicos-sms{
+    color:#fafafa;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+}
+
+.text-image{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.responsive-graphic{
+    width: 600px;
+    height: 350px;
+}
+
+.background-planos{
+    background-color: #f5f6fd;
+    width: 100vw;
+    height: 600px;   
+}
+
+.main-box{
+    padding-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.box-intern{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px 0 rgba(120,135,182,.4);
+    width: 25%;
+    height: 550px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-box{
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'ubuntu'
+}
+
+.vantages{
+    font-weight: medium;
+    font-family: 'ubuntu';
+    text-transform: capitalize;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-   
+    .responsive-graphic{
+        width: 300px;
+        height: 250px;
+    }
+
+    .box-intern{
+        width: 50%;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

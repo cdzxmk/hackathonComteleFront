@@ -8,28 +8,37 @@ export default class views extends Component {
  
 
   componentDidMount(){
-    
-    var ctx = document.getElementById('myChart');
-    var myDoughnutChart = new Chart(ctx, {
-      type: 'doughnut',
-      data:{
-        labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-        datasets: [
-          {
-            label: "Population (millions)",
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-            data: [2478,5267,734,784,433],
+    new Chart(document.getElementById("line-chart"), {
+      type: 'line',
+      data: {
+        labels: [1,1.5,1.7,2,2.5,3,3.5,4,4.5,5,'Reais'],
+        datasets: [{ 
+            data: [2.30,2.90,3.20,4.10],
+            label: "Dolar",
+            borderColor: "#3e95cd",
+            fill: false
+          }, { 
+            data: [2.80,3.0,3.40,4.45],
+            label: "Euro",
+            borderColor: "#8e5ea2",
+            fill: false
+          }, { 
+            data: [3.30,2.30,2.50,5.10],
+            label: "Libra",
+            borderColor: "#da2",
+            fill: false
           }
         ]
       },
       options: {
         title: {
           display: true,
-          text: 'Predicted world population (millions) in 2050'
-        }
+          text: 'Exemplo de Cotações'
+        },
+        responsive:true
       }
     });
-
+    
 
   }
 
@@ -43,15 +52,40 @@ export default class views extends Component {
           <div style={{marginRigth:"20%"}}>
               <h1 className="anuncio-cash">Analise<br/> Cotações</h1>
               <p className="anuncio-cash-body">Tenha controle <span style={{fontWeigth:"bold!important"}}>total</span> das taxas de <br/>câmbio com auxilio de analises e gráficos precisos.</p>
-              <a href="#!" class="waves-effect yellow accent-4 waves-light btn-large btn-main"><i class="material-icons right">insert_chart</i>Informações</a>
+              <a href="#infos" className="waves-effect yellow accent-4 waves-light btn-large btn-main"><i className="material-icons right">insert_chart</i>Informações</a>
             </div>
             <img className="responsive-img" src={"./assets/render-carteira.png"} alt="Cash"></img>
           </div>
         </div>
         <div className="background-red">
            <div className="content">
-            <h1 className="anuncio-cash title-red">GRÁFICOS PARA<br/> ANÁLISES DE CÂMBIO</h1>
-            <canvas id="myChart" style={{width:"400", height:"400"}}></canvas>
+            <h1 id="infos" className="anuncio-cash title-red">GRÁFICOS PARA<br/> ANÁLISES DE CÂMBIO</h1>
+            <div className="box-graphics">
+              <canvas id="line-chart" className="responsive-graphic"></canvas>
+              <a href="#price" className="waves-effect yellow accent-4 waves-light btn-large btn-main"><i className="material-icons right">attach_money</i>Planos</a>
+            </div>
+           </div>
+        </div>
+        <div className="background-planos">
+           <div id="price" className="main-box">
+              <div style={{borderTop:"solid #ffd600 10px"}} className="box-intern">
+                <h1 className="title-box">PREMIUM</h1>
+                <i style={{color:"#ffd600"}} className="medium material-icons">insert_chart</i>
+                <h1 className="title-box">R$9,50</h1>
+                <p className="vantages">Acesso á Gráficos Real Time<i style={{color:"green"}} className="small material-icons">done</i></p>
+                <p className="vantages">Envio de SMS para Notificação<i style={{color:"green"}} className="small material-icons">done</i></p>
+                <p className="vantages">Favoritar Moedas<i style={{color:"green"}} className="small material-icons">done</i></p>
+                <a href="#price" className="waves-effect yellow accent-4 waves-light btn-large btn-main"><i className="material-icons right">thumb_up</i>Tenho Interesse!</a>
+              </div>
+              <div style={{borderTop:"solid #63b8b2 10px"}}className="box-intern">
+              <h1 className="title-box">FREE</h1>
+              <i style={{color:"#63b8b2"}} className="medium material-icons">assignment_late</i>
+              <h1 className="title-box">R$0,00</h1>
+                <p className="vantages">Acesso á Gráficos Real <i style={{color:"green"}} className="small material-icons">done</i></p>
+                <p className="vantages">Envio de SMS para Notificação <i style={{color:"red"}} className="small material-icons">close</i></p>
+                <p className="vantages">Favoritar Moedas <i style={{color:"red"}} className="small material-icons">close</i></p>
+                <a href="#price" className="waves-effect  teal lighten-2 waves-light btn-large btn-main"><i className="material-icons right">thumb_up</i>Tenho Interesse!</a>
+              </div>
            </div>
         </div>
       </main>
