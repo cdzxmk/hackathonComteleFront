@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import './styles.css';
 import Chart from 'chart.js';
+import {WOW} from 'wowjs';
 // import { Container } from './styles';
 
 export default class views extends Component {
  
 
   componentDidMount(){
+    new WOW().init();
     new Chart(document.getElementById("line-chart"), {
       type: 'line',
       data: {
@@ -50,8 +52,8 @@ export default class views extends Component {
         <Navbar/>
         <div className="money">
           <div style={{marginRigth:"20%"}}>
-              <h1 className="anuncio-cash">Analise<br/> Cotações</h1>
-              <p className="anuncio-cash-body">Tenha controle <span style={{fontWeigth:"bold!important"}}>total</span> das taxas de <br/>câmbio com auxilio de analises e gráficos precisos.</p>
+              <h1 className="wow bounceInUp anuncio-cash">Analise<br/> Cotações</h1>
+              <p className="wow bounceInUp anuncio-cash-body">Tenha controle <span style={{fontWeigth:"bold!important"}}>total</span> das taxas de <br/>câmbio com auxilio de analises e gráficos precisos.</p>
               <a href="#infos" className="waves-effect yellow accent-4 waves-light btn-large btn-main"><i className="material-icons right">insert_chart</i>Informações</a>
             </div>
             <img className="responsive-img" src={"./assets/render-carteira.png"} alt="Cash"></img>
@@ -59,7 +61,7 @@ export default class views extends Component {
         </div>
         <div className="background-red">
            <div className="content">
-            <h1 id="infos" className="anuncio-cash title-red">GRÁFICOS PARA<br/> ANÁLISES DE CÂMBIO</h1>
+            <h1 id="infos" className="wow bounceInUp anuncio-cash title-red">GRÁFICOS PARA<br/> ANÁLISES DE CÂMBIO</h1>
             <div className="box-graphics">
               <canvas id="line-chart" className="responsive-graphic"></canvas>
               <a href="#price" className="waves-effect yellow accent-4 waves-light btn-large btn-main"><i className="material-icons right">attach_money</i>Planos</a>
@@ -68,19 +70,19 @@ export default class views extends Component {
         </div>
         <div className="background-planos">
            <div id="price" className="main-box">
-              <div style={{borderTop:"solid #ffd600 10px"}} className="box-intern">
+              <div style={{borderTop:"solid #ffd600 10px"}} className="wow fadeIn box-intern">
                 <h1 className="title-box">PREMIUM</h1>
                 <i style={{color:"#ffd600"}} className="medium material-icons">insert_chart</i>
-                <h1 className="title-box">R$9,50</h1>
+                <h1 className="title-box"><small style={{fontWeigth:"0"}}>R$</small>9,50</h1>
                 <p className="vantages">Acesso á Gráficos Real Time<i style={{color:"green"}} className="small material-icons">done</i></p>
                 <p className="vantages">Envio de SMS para Notificação<i style={{color:"green"}} className="small material-icons">done</i></p>
                 <p className="vantages">Favoritar Moedas<i style={{color:"green"}} className="small material-icons">done</i></p>
                 <a href="#price" className="waves-effect yellow accent-4 waves-light btn-large btn-main"><i className="material-icons right">thumb_up</i>Tenho Interesse!</a>
               </div>
-              <div style={{borderTop:"solid #63b8b2 10px"}}className="box-intern">
+              <div style={{borderTop:"solid #63b8b2 10px"}}className="wow fadeIn box-intern">
               <h1 className="title-box">FREE</h1>
               <i style={{color:"#63b8b2"}} className="medium material-icons">assignment_late</i>
-              <h1 className="title-box">R$0,00</h1>
+              <h1 className="title-box"><small style={{fontWeigth:"0"}}>R$</small>0,00</h1>
                 <p className="vantages">Acesso á Gráficos Real <i style={{color:"green"}} className="small material-icons">done</i></p>
                 <p className="vantages">Envio de SMS para Notificação <i style={{color:"red"}} className="small material-icons">close</i></p>
                 <p className="vantages">Favoritar Moedas <i style={{color:"red"}} className="small material-icons">close</i></p>
