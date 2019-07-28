@@ -23,7 +23,7 @@ export default class Navbar extends Component {
                             <Link to={{pathname:"/"}} className="brand-logo"><img alt="Logo SMcash" className="responsive-img logo-nav" src={"./assets/logo.png"}></img></Link>
                             <a href="#!" data-target="mobile-demo" className="sidenav-trigger"><i style={{color:"black"}} className="material-icons">menu</i></a>
                             <ul className="right hide-on-med-and-down">
-                                <li><a className="" href="#!">Entrar</a></li>
+                                <li><a className="modal-trigger" href="#modalLogin">Entrar</a></li>
                                 <li><a href="#price" className="yellow accent-4 waves-effect btn waves-yellow btn-large destaque-nav">Cadastrar</a></li>
                             </ul>
                         </div>
@@ -31,8 +31,8 @@ export default class Navbar extends Component {
                 </div>
 
                 <ul className="sidenav" id="mobile-demo">
-                    <li><a href="#!">Entrar</a></li>
-                    <li><a href="#!">Cadastrar</a></li>
+                    <li><a className="modal-trigger" href="#modalLogin">Entrar</a></li>
+                    <li><a href="#price">Cadastrar</a></li>
                 </ul>
             </div>
         );

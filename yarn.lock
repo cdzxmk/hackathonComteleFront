@@ -4687,6 +4687,11 @@ ignore@^4.0.6:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
 
+imask@^5.1.7:
+  version "5.1.7"
+  resolved "https://registry.yarnpkg.com/imask/-/imask-5.1.7.tgz#ef691aba65a188e73a6dc0d02e5d05b081af34fd"
+  integrity sha512-u/6x6qEua2ADe3i+vW19OIfsgNpn+cM3vr9UBNTDilNKX2qKxos7OVNcrrdVwJHKaUmDmBqD+mJXirTuqwV+jg==
+
 immer@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/immer/-/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
@@ -7740,7 +7745,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.6.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -7955,6 +7960,14 @@ react-error-overlay@^5.1.6:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
+
+react-imask@^5.1.7:
+  version "5.1.7"
+  resolved "https://registry.yarnpkg.com/react-imask/-/react-imask-5.1.7.tgz#8ab71669930ad3090ec94df71e774e56ff9c0c7d"
+  integrity sha512-5o45k6G7q4Ek9IcYGeG32nqyZuAGuBjPBLxgxq596uXC4A68LUBkh9v9PiZcVB/Xz1/TU6hKYSSkfyxM4GMH4Q==
+  dependencies:
+    imask "^5.1.7"
+    prop-types "^15.7.2"
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.8.6"

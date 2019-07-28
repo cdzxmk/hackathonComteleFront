@@ -5,6 +5,7 @@ import Chart from 'chart.js';
 import {WOW} from 'wowjs';
 import ModalCadastroPremium from '../modalCadastro/ModalCadastroPremium';
 import ModalCadastroFree from '../modalCadastro/ModalCadastroFree';
+import ModalLogin from '../modalLogin/ModalLogin';
 // import { Container } from './styles';
 
 export default class views extends Component {
@@ -97,6 +98,7 @@ export default class views extends Component {
         </div>
         <ModalCadastroPremium/>
         <ModalCadastroFree/>
+        <ModalLogin/>
       </main>
     );
   }
