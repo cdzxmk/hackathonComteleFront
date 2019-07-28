@@ -24,7 +24,7 @@ export default class Navbar extends Component {
                             <a href="#!" data-target="mobile-demo" className="sidenav-trigger"><i style={{color:"black"}} className="material-icons">menu</i></a>
                             <ul className="right hide-on-med-and-down">
                                 <li><a className="" href="#!">Entrar</a></li>
-                                <li><a className="yellow accent-4 waves-effect btn waves-yellow btn-large destaque-nav" href="#!">Cadastrar</a></li>
+                                <li><a href="#price" className="yellow accent-4 waves-effect btn waves-yellow btn-large destaque-nav">Cadastrar</a></li>
                             </ul>
                         </div>
                     </nav>

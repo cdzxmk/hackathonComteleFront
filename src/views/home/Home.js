@@ -3,6 +3,8 @@ import Navbar from '../../components/navbar/Navbar';
 import './styles.css';
 import Chart from 'chart.js';
 import {WOW} from 'wowjs';
+import ModalCadastroPremium from '../modalCadastro/ModalCadastroPremium';
+import ModalCadastroFree from '../modalCadastro/ModalCadastroFree';
 // import { Container } from './styles';
 
 export default class views extends Component {
@@ -10,6 +12,10 @@ export default class views extends Component {
 
   componentDidMount(){
     new WOW().init();
+    this.criaGrafico();
+  }
+
+  criaGrafico = () =>{
     new Chart(document.getElementById("line-chart"), {
       type: 'line',
       data: {
@@ -40,8 +46,6 @@ export default class views extends Component {
         responsive:true
       }
     });
-    
-
   }
 
 
@@ -73,23 +77,26 @@ export default class views extends Component {
               <div style={{borderTop:"solid #ffd600 10px"}} className="wow fadeIn box-intern">
                 <h1 className="title-box">PREMIUM</h1>
                 <i style={{color:"#ffd600"}} className="medium material-icons">insert_chart</i>
-                <h1 className="title-box"><small style={{fontWeigth:"0"}}>R$</small>9,50</h1>
+                <h1 className="title-box"><small style={{fontWeigth:"0"}}>R$</small>7,50</h1>
                 <p className="vantages">Acesso á Gráficos Real Time<i style={{color:"green"}} className="small material-icons">done</i></p>
                 <p className="vantages">Envio de SMS para Notificação<i style={{color:"green"}} className="small material-icons">done</i></p>
                 <p className="vantages">Favoritar Moedas<i style={{color:"green"}} className="small material-icons">done</i></p>
-                <a href="#price" className="waves-effect yellow accent-4 waves-light btn-large btn-main"><i className="material-icons right">thumb_up</i>Tenho Interesse!</a>
+                <a disabled d="premium" href="#!" className="modal-trigger waves-effect yellow accent-4 waves-light btn-large btn-main"><i className="material-icons right">thumb_up</i>Tenho Interesse!</a>
+                <small style={{fontWeight:"thin", color:"gray"}}className="vantages">Em breve</small>
               </div>
               <div style={{borderTop:"solid #63b8b2 10px"}}className="wow fadeIn box-intern">
               <h1 className="title-box">FREE</h1>
               <i style={{color:"#63b8b2"}} className="medium material-icons">assignment_late</i>
               <h1 className="title-box"><small style={{fontWeigth:"0"}}>R$</small>0,00</h1>
-                <p className="vantages">Acesso á Gráficos Real <i style={{color:"green"}} className="small material-icons">done</i></p>
-                <p className="vantages">Envio de SMS para Notificação <i style={{color:"red"}} className="small material-icons">close</i></p>
+                <p className="vantages">Acesso á Gráficos Real Time<i style={{color:"green"}} className="small material-icons">done</i></p>
+                <p className="vantages">Envio de SMS para Notificação <i style={{color:"green"}} className="small material-icons">done</i></p>
                 <p className="vantages">Favoritar Moedas <i style={{color:"red"}} className="small material-icons">close</i></p>
-                <a href="#price" className="waves-effect  teal lighten-2 waves-light btn-large btn-main"><i className="material-icons right">thumb_up</i>Tenho Interesse!</a>
+                <a id="free" href="#modalCadastroFree" className="modal-trigger waves-effect  teal lighten-2 waves-light btn-large btn-main"><i className="material-icons right">thumb_up</i>Tenho Interesse!</a>
               </div>
            </div>
         </div>
+        <ModalCadastroPremium/>
+        <ModalCadastroFree/>
       </main>
     );
   }

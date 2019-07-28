@@ -133,7 +133,17 @@ main{
     }
 
     .box-intern{
-        width: 50%;
+        width: 80%;
+    }
+
+    .main-box{
+        flex-direction: column;
+    }
+
+    .background-planos{
+        background-color: #f5f6fd;
+        width: 100vw;
+        height: 1200px;   
     }
 }
 
