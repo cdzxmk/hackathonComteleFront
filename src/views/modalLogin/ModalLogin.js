@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles.css'
-import {IMaskInput} from 'react-imask';
 
 
 export default class ModalLogin extends Component {
@@ -8,8 +7,8 @@ export default class ModalLogin extends Component {
     return (
         <div id="modalLogin" className="modal modalFree">
             <div className="modal-content modalPlano">
-                <h4 className="title-box">Free</h4>
-                <i style={{color:"#63b8b2"}} className="medium material-icons">assignment_late</i>
+                <h4 className="title-box">Login</h4>
+                <i style={{color:"#63b8b2"}} className="medium material-icons">account_circle</i>
                 <div className="row">
                     <form className="col s12">
                         <div className="row">

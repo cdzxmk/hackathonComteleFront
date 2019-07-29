@@ -1,0 +1,49 @@
+.background-areaLogada{
+    width: 100vw;
+    height:1000px;
+    color: red;
+    overflow-x: hidden;
+}
+
+.title-areaLogada{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.title{
+    font-family: 'ubuntu';
+    color: #4e342e;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.content-areaLogada{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.title-moeda{
+    font-family: 'ubuntu';
+    font-weight: bold;
+    color: #4e342e;
+    font-size: 30px;
+}
+
+.moeda{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .content-areaLogada{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
