@@ -2,34 +2,32 @@ import React, { Component } from 'react';
 import './styles.css';
 import Navbar from '../../components/navbar/Navbar';
 import Chart from 'chart.js';
-
+import api from '../../services/api';
 
 export default class AreaLogada extends Component {
 
-  componentDidMount(){
-    this.criaGrafico("euro");
-    this.criaGrafico("dolar");
+  componentDidMount(){ 
+    this.carregaMoedas();
+    this.criaGrafico('dolar');
+  }
+
+  carregaMoedas = async () =>{
+    // const response = await api.get('/url');
+    const response = await api;
+    response.docs.map((moeda)=>{
+      this.setState = moeda;
+    })
   }
 
   criaGrafico = (idCanvas)=>{
     new Chart(document.getElementById(idCanvas), {
       type: 'line',
       data: {
-        labels: [1,1.5,1.7,2,2.5,3,3.5,4,4.5,5,'Reais'],
+        labels: [29,28,27,26,25],
         datasets: [{ 
-            data: [2.30,2.90,3.20,4.10],
+            data: [2.50,3.20,3.40,3.10,2.80,4,4.14,3.70,3.10,5],
             label: "Dolar",
             borderColor: "#3e95cd",
-            fill: false
-          }, { 
-            data: [2.80,3.0,3.40,4.45],
-            label: "Euro",
-            borderColor: "#8e5ea2",
-            fill: false
-          }, { 
-            data: [3.30,2.30,2.50,5.10],
-            label: "Libra",
-            borderColor: "#da2",
             fill: false
           }
         ]
@@ -37,7 +35,7 @@ export default class AreaLogada extends Component {
       options: {
         title: {
           display: true,
-          text: 'Exemplo de Cotações'
+          text: 'Cotação por dia'
         },
         responsive:true
       }
@@ -57,10 +55,7 @@ export default class AreaLogada extends Component {
               <h4 className="title-moeda"><img style={{width:"70px",heigth:"70px"}}className="responsive-img" alt="Money" src={"./assets/dolar.png"}/>USD</h4>
               <canvas id="dolar" className="responsive-graphic"></canvas>
             </div>
-            <div className="moeda">
-              <h4 className="title-moeda"><img style={{width:"70px",heigth:"70px"}}className="responsive-img" alt="Money" src={"./assets/dolar.png"}/>EURO</h4>
-              <canvas id="euro" className="responsive-graphic"></canvas>
-            </div>
+            {console.log(this.state)}
           </div>
         </div>
       </main>
