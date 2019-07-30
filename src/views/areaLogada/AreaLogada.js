@@ -8,25 +8,26 @@ export default class AreaLogada extends Component {
 
   componentDidMount(){ 
     this.carregaMoedas();
-    this.criaGrafico('dolar');
+  }
+
+  state = {
+    moedas : [],
   }
 
   carregaMoedas = async () =>{
     // const response = await api.get('/url');
     const response = await api;
-    response.docs.map((moeda)=>{
-      this.setState = moeda;
-    })
+    this.setState({moedas:response.data});
   }
 
-  criaGrafico = (idCanvas)=>{
+  criaGrafico = (idCanvas,dias,cotacoes,nomeDaMoeda)=>{
     new Chart(document.getElementById(idCanvas), {
       type: 'line',
       data: {
-        labels: [29,28,27,26,25],
+        labels: dias,
         datasets: [{ 
-            data: [2.50,3.20,3.40,3.10,2.80,4,4.14,3.70,3.10,5],
-            label: "Dolar",
+            data: cotacoes,
+            label: nomeDaMoeda,
             borderColor: "#3e95cd",
             fill: false
           }
@@ -51,11 +52,17 @@ export default class AreaLogada extends Component {
             <h1 className="title">MOEDAS</h1>
           </div>
           <div className="content-areaLogada">
-            <div className="moeda">
-              <h4 className="title-moeda"><img style={{width:"70px",heigth:"70px"}}className="responsive-img" alt="Money" src={"./assets/dolar.png"}/>USD</h4>
-              <canvas id="dolar" className="responsive-graphic"></canvas>
-            </div>
-            {console.log(this.state)}
+            {this.state.moedas.map((coin)=>{
+              return(
+                <div key={coin.sigla} className="moeda">
+                  <h4 className="title-moeda"><img style={{width:"70px",heigth:"70px"}}className="responsive-img" alt="Money" src={"./assets/dolar.png"}/>{coin.sigla}</h4>
+                  <canvas id={coin.tipo} className="responsive-graphic"></canvas>
+                  {setTimeout(() => {
+                    this.criaGrafico(coin.tipo,coin.dias,coin.cotacoes,coin.nome)
+                  }, 1)}
+                </div>
+              );
+            })}
           </div>
         </div>
       </main>

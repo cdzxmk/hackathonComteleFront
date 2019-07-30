@@ -3,7 +3,7 @@ import axios from 'axios';
 // const api = axios.create({baseURL: ''});
 
 const api = {
-    docs:[
+    data:[
         {
             "tipo":"Dolar",
             "nome":"Dolar Americano",
