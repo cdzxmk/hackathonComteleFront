@@ -3,3 +3,14 @@
     flex-wrap: wrap!important;
     flex-direction: row;
 }
+
+#modalSelecionarMoedas h4{
+    font-family: 'ubuntu';
+    color: #4e342e;
+    font-weight: bold;
+}
+
+#modalSelecionarMoedas p{
+    font-family: 'ubuntu';
+    font-weight: bold;
+}
