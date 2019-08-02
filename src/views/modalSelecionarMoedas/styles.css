@@ -1,0 +1,5 @@
+.moedas-content{
+    display: flex;
+    flex-wrap: wrap!important;
+    flex-direction: row;
+}

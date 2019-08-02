@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 // Import Materialize e css
 import M from "materialize-css";
 import './styles.css';
-
 import {Link} from 'react-router-dom';
 
 export default class Navbar extends Component {
@@ -26,6 +25,7 @@ export default class Navbar extends Component {
                                 <ul className="right hide-on-med-and-down">
                                     <li><Link to={{pathname:"/areaLogada"}}>Cotações</Link></li>
                                     <li><Link to={{pathname:"/meusDados"}}>Meus Dados</Link></li>
+                                    <li><a className="modal-trigger" href="#modalSelecionarMoedas">Favoritar Moedas</a></li>
                                     <li><Link to={{pathname:"/"}}>Sair</Link></li>
                                 </ul>
                             </div>
@@ -35,6 +35,7 @@ export default class Navbar extends Component {
                     <ul className="sidenav" id="mobile-demo">
                     <li><Link to={{pathname:"/areaLogada"}}>Cotações</Link></li>
                     <li><Link to={{pathname:"/meusDados"}}>Meus Dados</Link></li>
+                    <li><a className="modal-trigger" href="#modalSelecionarMoedas">Favoritar Moedas</a></li>
                     <li><Link to={{pathname:"/"}}>Sair</Link></li>
                         
                     </ul>
